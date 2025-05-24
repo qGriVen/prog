@@ -4,47 +4,71 @@
     {
         static void Main(string[] args)
         {
-            while (true) 
+            Random random = new Random();
+            int gameAttempts = 0;
+
+            while (true)
             {
                 Console.Clear();
-                Random random = new Random();
-                int rand = random.Next(1 , 1000);
-                Console.WriteLine("Было загадано число от 1 до 1000, угадай его");
-                int i = 0;
-                
+                int randNumber = random.Next(1, 1000);
+                int attempts = 0;
+                gameAttempts++;
 
+                Console.WriteLine($"Игра {gameAttempts}");
+                Console.WriteLine("Было загадано число от 1 до 1000, угадай его");
+                Console.WriteLine("Введите команду или текст (/restart для перезапуска, /exit для выхода):");
 
                 while (true)
                 {
-                    i++;
-                    int number = int.Parse(Console.ReadLine());
-                    if (number > rand)
+                    Console.WriteLine("Введите число или команду");
+                    string input = Console.ReadLine();  
+                    
+                    try
                     {
-                        Console.WriteLine("Указанное число больше загаданного!");
-                        Console.WriteLine("Кол-во попыток " + i + ":");
-                    }
-                    if (number < rand)
-                    {
-                        Console.WriteLine("Указанное  число меньше загаданного!");
-                        Console.WriteLine("Кол-во попыток " + i + ":");
-                    }
-                    else if (number == rand)
-                    {
-                        Console.WriteLine("Вы угадали число с " + i + " попытки:");
-                        Console.WriteLine("для перезапуска нажмите 1 для выхода нажмите 2");
-                        int why = int.Parse(Console.ReadLine());
-                        if(why == 1)
+                        attempts++;
+
+                        if (input == "/restart")
                         {
                             break;
                         }
+                        else if (input == "/exit")
+                        {
+                            Console.Clear();
+                            Console.WriteLine($"Игра {gameAttempts} окончена");
+                            return;
+                        }
+
+                        if (!int.TryParse(input, out int guess))
+                        {
+                            throw new FormatException("Получены некорректные данные, введи целое число или команду!");
+                        }
+
+                        if (guess > randNumber)
+                        {
+                            Console.WriteLine("Введеное вами число больше загаданного!");
+                        }
+                        else if (guess < randNumber)
+                        {
+                            Console.WriteLine("Введеное вами число меньше загаданного!");
+                        }
                         else
                         {
-                            Environment.Exit(0);
+                            Console.WriteLine("Вы угадали число с " + attempts + " попытки:");
                         }
+                        
                     }
+                    catch (FormatException ex)
+                    {
+                        Console.WriteLine(ex.Message);
+                    }
+                    catch (Exception ex)
+                    {
+                        Console.WriteLine($"Произошла ошибка: {ex.Message}");
+                    }
+                }
+
                 }
             }
 
         }
     }
-}
