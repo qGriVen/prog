@@ -1,0 +1,14 @@
+D:\фреймы\Guess the number 2\bin\Debug\net8.0\Guess the number 2.exe
+D:\фреймы\Guess the number 2\bin\Debug\net8.0\Guess the number 2.deps.json
+D:\фреймы\Guess the number 2\bin\Debug\net8.0\Guess the number 2.runtimeconfig.json
+D:\фреймы\Guess the number 2\bin\Debug\net8.0\Guess the number 2.dll
+D:\фреймы\Guess the number 2\bin\Debug\net8.0\Guess the number 2.pdb
+D:\фреймы\Guess the number 2\obj\Debug\net8.0\Guess the number 2.GeneratedMSBuildEditorConfig.editorconfig
+D:\фреймы\Guess the number 2\obj\Debug\net8.0\Guess the number 2.AssemblyInfoInputs.cache
+D:\фреймы\Guess the number 2\obj\Debug\net8.0\Guess the number 2.AssemblyInfo.cs
+D:\фреймы\Guess the number 2\obj\Debug\net8.0\Guess the number 2.csproj.CoreCompileInputs.cache
+D:\фреймы\Guess the number 2\obj\Debug\net8.0\Guess the number 2.dll
+D:\фреймы\Guess the number 2\obj\Debug\net8.0\refint\Guess the number 2.dll
+D:\фреймы\Guess the number 2\obj\Debug\net8.0\Guess the number 2.pdb
+D:\фреймы\Guess the number 2\obj\Debug\net8.0\Guess the number 2.genruntimeconfig.cache
+D:\фреймы\Guess the number 2\obj\Debug\net8.0\ref\Guess the number 2.dll
